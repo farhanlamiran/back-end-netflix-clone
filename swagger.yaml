@@ -1,0 +1,14 @@
+openapi: 3.1.0
+info:
+  title: Netflix clone API Project
+  description: Netflix API Express JS MongoDB Databases
+paths:
+  /my-movies/{email}/{token}:
+    get:
+      summary: Get Favorite Movies User
+      parameters:
+        -in: path
+        name: email
+        required: true
+        schema:
+          type: string
