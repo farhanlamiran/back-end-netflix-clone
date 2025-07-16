@@ -8,14 +8,17 @@ const swaggerDocs = YAML.load('./swagger.yaml')
 
 require('dotenv').config();
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3000
 
 const app = express();
+
+console.log("PORT:", PORT);
+console.log("MONGODB_URL:", process.env.MONGODB_URL);
 
 // Middleware
 app.use(express.json());
 app.use(cors({
-    origin: ['https://faanglix.netlify.app/login'], // Ganti ini
+    origin: ['https://faanglix.netlify.app/'], // Ganti ini
     credentials: true,
 }))
 
