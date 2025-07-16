@@ -18,7 +18,7 @@ console.log("MONGODB_URL:", process.env.MONGODB_URL);
 // Middleware
 app.use(express.json());
 app.use(cors({
-    origin: ['https://faanglix.netlify.app/'], // Ganti ini
+    origin: ['https://faanglix.netlify.app'], // Ganti ini
     credentials: true,
 }))
 
